@@ -279,10 +279,10 @@ async function sendAnalytics() {
 var send = XMLHttpRequest.prototype.send;
 XMLHttpRequest.prototype.send = async function () {
   var endPoints = window.bhOptions.endpoints;
-  console.log('endPoints', endPoints, this._openArgs.url);
-  // Check if the request is included in one of the end points
-  if (endPoints.some((endPoint) => this._openArgs.url.startsWith(endPoint))) {
-    // if (this._openArgs.url.startsWith('https://tall-insects-feel-195-216-219-4.loca.lt/products')) {
+  // Check if one of the endpoints is in the url
+  const isEndPoint = endPoints.some((endPoint) => this._openArgs.url.startsWith(endPoint));
+  console.log('isEndPoint', isEndPoint, endPoints, this._openArgs.url);
+  if (isEndPoint) {
     // Send the tracking data to the server
     sendAnalytics.apply(this, arguments);
     this.onreadystatechange = function () {
