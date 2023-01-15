@@ -1,0 +1,25 @@
+export const SCORE = {
+  MAX: 20,
+  SUSPECT: 40,
+  CRITICAL_SUSP: 20,
+  HIGH_SUSP: 15,
+  MEDIUM_SUSP: 10,
+  LOW_SUSP: 5,
+  MINOR_SUSP: 2,
+  NEGLIGIBLE_SUSP: 1
+};
+
+export const HUMAN_SCORE = 12;
+
+export const MINIMUM_EVENT_INTERVAL = 2000;
+
+export const MINIMUM_AVERAGE_EVENT_INTERVAL = 1000;
+
+export const REQUETS_PER_MIN = {
+  BOT: 50,
+  MAYBE_BOT: 35,
+  MAYBE_HUMAN: 20,
+  HUMAN: 10
+};
+
+export const AVERAGE_RTT_PER_SECOND = 100;
