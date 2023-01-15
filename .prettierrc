@@ -1,0 +1,22 @@
+{
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.mts"
+      ],
+      "options": {
+        "parser": "typescript"
+      }
+    }
+  ],
+  "bracketSpacing": true,
+  "jsxBracketSameLine": true,
+  "arrowParens": "always",
+  "useTabs": false,
+  "printWidth": 180,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "semi": true
+}

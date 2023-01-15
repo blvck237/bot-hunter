@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["es6"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "removeComments": true,
+    "importHelpers": true,
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "noEmitOnError": false,
+    "paths": {
+      "@core/*": ["core/*"],
+      "@core": ["core/index"],
+      "@config": ["config/index"],
+      "@controllers/*": ["controllers/*"],
+      "@constants/*": ["constants/*"],
+      "@database/*": ["database/*"],
+      "@factories/*": ["factories/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@interfaces/*": ["interfaces/*"],
+      "@utils/*": ["utils/*"],
+      "@routes/*": ["routes/*"],
+      "@typings/*": ["types/*"],
+      "@repositories/*": ["repositories/*"],
+      "@services/*": ["services/*"],
+      "@models": ["models/index"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.json", ".env"],
+  "exclude": ["node_modules"]
+}
