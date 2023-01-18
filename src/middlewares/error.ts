@@ -11,8 +11,11 @@ export const errorMiddleware = (err, req: Request, res: Response, next: NextFunc
   }
   LoggerInstance.error({
     level: 'error',
-    message: `${err.status} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`
+    message: `${req.method} - ${req.originalUrl} - ${err.status} - ${err.message} - ${req.clientIp} - Stacktrace: ${err.stack}`
   });
   messageToDisplay = err.message;
-  res.status(err.status).json({ code: err.status, success: false, message: messageToDisplay });
+  res.status(err.status).json({ code: err.status, 
+    success: false, 
+    message: messageToDisplay,
+   });
 };

@@ -1,7 +1,7 @@
 import figlet from 'figlet';
 import { LoggerInstance } from '@utils/logger';
 
-export const displayStartMessage = () => {
+export const displayStartMessage = (port) => {
   figlet('Bot Hunter', function (err, data) {
     if (err) {
       LoggerInstance.error('Something went wrong...');
@@ -9,5 +9,6 @@ export const displayStartMessage = () => {
       return;
     }
     console.log(data);
+    console.log(`Server started on port ${port}`);
   });
 };

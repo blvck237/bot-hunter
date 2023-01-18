@@ -9,10 +9,12 @@
     "emitDecoratorMetadata": true,
     "removeComments": true,
     "importHelpers": true,
+    "resolveJsonModule": true,
     "baseUrl": "./src",
     "outDir": "./dist",
     "noEmitOnError": false,
     "paths": {
+      "@db/*": ["db/*"],
       "@core/*": ["core/*"],
       "@core": ["core/index"],
       "@config": ["config/index"],
