@@ -32,4 +32,10 @@ class ForbiddenException extends HttpException {
   }
 }
 
-export { HttpException, BadRequestException, UnauthorizedException, NotFoundException, AlreadyExistException, ForbiddenException };
+class LimitException extends HttpException {
+  constructor(message: string) {
+    super(message, httpStatus.TOO_MANY_REQUESTS);
+  }
+}
+
+export { HttpException, LimitException, BadRequestException, UnauthorizedException, NotFoundException, AlreadyExistException, ForbiddenException };
