@@ -7,6 +7,8 @@ interface CustomRequest  {
 
 declare global {
   namespace Express {
-    interface Request extends CustomRequest {}
+    interface Request {
+      clientIp: string;
+    }
   }
 }

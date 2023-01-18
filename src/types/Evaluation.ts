@@ -4,13 +4,12 @@ export interface Evaluation extends EvaluationInput {
 }
 
 export interface EvaluationInput {
-  ip: string;
+  ip: string | string[];
   score: number;
   hash: string;
   fingerPrintScore: number;
   headersScore: number;
   trafficScore: number;
-  eventsScore: number;
   activityScore: number;
   captchaScore: number;
 }

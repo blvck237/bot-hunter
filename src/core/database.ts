@@ -13,7 +13,9 @@ class DbHandler {
 
   async connect(): Promise<void> {
     try {
+      // @ts-ignore
       this.#client = MongoClient.connect(this.#url, {
+        // @ts-ignore
         useNewUrlParser: true,
         useUnifiedTopology: true
       });

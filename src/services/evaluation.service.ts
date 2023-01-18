@@ -183,6 +183,7 @@ class EvaluationService {
     const query = { hash: this.#hash };
     const options = { limit: 1, sort: { createdAt: -1 } };
 
+    // @ts-ignore
     const evaluation = await this.#evaluationRepository.getMany(query, options);
     return evaluation?.[0];
   }
@@ -392,7 +393,6 @@ class EvaluationService {
     return score;
   }
 
-  #evaluateFlags(): number {}
 
   /**
    * Evaluate if the connection is keep-alive because bots tend to use keep-alive

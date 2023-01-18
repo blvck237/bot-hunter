@@ -82,13 +82,14 @@ class CaptchaService {
   }
 
   #updateCaptcha(captcha: Captcha, resolved: boolean): Promise<Captcha> {
+    const { retries } = captcha;
     const resolutionDuration = Date.now() - captcha.createdAt;
     const query = {
       hash: this.#hash,
       ip: this.#ip
     };
     const update = {
-      $set: { resolved, resolutionDuration, retries: { $inc: resolved ? 1 : 0 } }
+      $set: { resolved, resolutionDuration, retries: resolved ? retries + 1 : retries }
     };
     return this.#captchaRepository.updateOne(query, update);
   }
