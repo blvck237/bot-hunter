@@ -14,6 +14,7 @@ class AppLoader {
   async initApp({ expressApp }) {
     await this.dbLoader.connect();
     LoggerInstance.info('✌️ Database loaded and connected!');
+    await this.dbLoader.seed();
     await this.expressLoader.initExpress(expressApp);
     LoggerInstance.info('✌️ Express loaded');
   }
