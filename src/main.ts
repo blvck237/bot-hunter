@@ -17,7 +17,7 @@ class AppServer {
 
     await this.appLoader.initApp({ expressApp: app });
 
-    server.listen(config.port, '0.0.0.0', () => {
+    server.listen(config.port, () => {
       displayStartMessage(config.port);
     });
   }
