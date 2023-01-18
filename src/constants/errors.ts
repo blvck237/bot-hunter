@@ -1,0 +1,11 @@
+export const CAPTCHA_TOO_LONG = 'CAPTCHA_TOO_LONG';
+
+export const BOT_DETECTED = 'BOT_DETECTED';
+
+export const LIMIT_DETECTED = 'LIMIT_DETECTED';
+
+export const INVALID_CAPTCHA = 'INVALID_CAPTCHA';
+
+export const BOT_BEHAVIOUR = 'BOT_BEHAVIOUR';
+
+export const TOO_MANY_REQUESTS = 'TOO_MANY_REQUESTS';

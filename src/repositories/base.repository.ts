@@ -56,4 +56,9 @@ export abstract class BaseRepository<T> implements IRepository<T> {
     const result = await this.collection.findOneAndUpdate(query, update, { returnDocument: 'after' });
     return result.value as T;
   };
+
+  updateOrCreate = async (query: Filter<T>, update: UpdateFilter<T>): Promise<T> => {
+    const result = await this.collection.findOneAndUpdate(query, update, { upsert: true, returnDocument: 'after' });
+    return result.value as T;
+  };
 }

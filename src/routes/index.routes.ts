@@ -1,16 +1,25 @@
 import { Router } from 'express';
-import MonitorRouter from './monitor.routes';
+import CaptchaRouter from './captcha.routes';
+import EvaluationRouter from './evaluation.routes';
+import VisitorRouter from './visitor.routes';
 
 class AppRouters {
   baseRouter: Router;
-  monitorRouter: MonitorRouter;
+  evaluationRouter: EvaluationRouter;
+  visitorRouter: VisitorRouter;
+  captchaRouter: CaptchaRouter;
+
   constructor() {
     this.baseRouter = Router();
-    this.monitorRouter = new MonitorRouter();
+    this.evaluationRouter = new EvaluationRouter();
+    this.visitorRouter = new VisitorRouter();
+    this.captchaRouter = new CaptchaRouter();
   }
 
   initAppRouters(): Router {
-    this.monitorRouter.init(this.baseRouter);
+    this.evaluationRouter.init(this.baseRouter);
+    this.visitorRouter.init(this.baseRouter);
+    this.captchaRouter.init(this.baseRouter);
     return this.baseRouter;
   }
 }

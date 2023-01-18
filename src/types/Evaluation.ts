@@ -8,10 +8,9 @@ export interface EvaluationInput {
   score: number;
   hash: string;
   fingerPrintScore: number;
-  jsExecutionScore: number;
-  protocolScore: number;
+  headersScore: number;
   trafficScore: number;
   eventsScore: number;
   activityScore: number;
-  userAgentScore: number;
+  captchaScore: number;
 }

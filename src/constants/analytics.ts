@@ -1,5 +1,6 @@
 export const SCORE = {
   MAX: 20,
+  ISBOT: 200,
   SUSPECT: 40,
   CRITICAL_SUSP: 20,
   HIGH_SUSP: 15,
@@ -11,9 +12,13 @@ export const SCORE = {
 
 export const HUMAN_SCORE = 12;
 
+export const MIN_HUMAN_SCORE = 9;
+
 export const MINIMUM_EVENT_INTERVAL = 2000;
 
 export const MINIMUM_AVERAGE_EVENT_INTERVAL = 1000;
+
+export const MINIMUM_AVERAGE_EVENT_INTERVAL_IN_S = MINIMUM_AVERAGE_EVENT_INTERVAL / 1000;
 
 export const REQUETS_PER_MIN = {
   BOT: 50,
@@ -22,4 +27,24 @@ export const REQUETS_PER_MIN = {
   HUMAN: 10
 };
 
+export const EVENTS_STATS = {
+  AVG_T_CLICKS: 1
+};
+
 export const AVERAGE_RTT_PER_SECOND = 100;
+
+// 3 mins
+export const SESSION_LONG = 180000;
+
+export const SESSION_SHORT = 10000;
+
+// 10s
+export const AVG_CAPTCHA_RES_TIME = {
+  NORMAL: 20000,
+  ABNORMAL: 30000,
+};
+
+export const AVG_CAPTCHA_RETRIES = {
+  NORMAL: 2,
+  ABNORMAL: 4,
+}

@@ -3,11 +3,18 @@ export interface AnalyticsInput {
   method: string;
   request: string;
   key: string;
+  sessionDuration: number;
   clickedElement: any[];
+  eventStats: AnalyticEventsSummary;
   clientInformation: AnalyticsInputClientInfo;
   userActions: AnalyticEvents[];
 }
 
+export interface AnalyticEventsSummary {
+  avgTClicks: number;
+  avgTKeydown: number;
+  avgTScroll: number;
+}
 export interface AnalyticEvents {
   event: string;
   time: number;
