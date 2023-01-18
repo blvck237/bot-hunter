@@ -6,7 +6,7 @@
     "dev": "env $(cat .env.development | xargs) nodemon",
     "prod": "env $(cat .env.production | xargs) node dist/main.js",
     "lint": "npx eslint --ext .ts src/",
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s",
     "scrap": "node scrap.js"
   },
   "devDependencies": {
