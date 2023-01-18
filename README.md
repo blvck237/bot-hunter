@@ -58,6 +58,7 @@ It should be added at the start or end of the body tag. It is loaded asynchronou
       })(document, 'script', 'https://cdn.jsdelivr.net/gh/blvck237/bot-hunter@latest/public/script/bot-hunter.js', { endpoints: ['http://endpoint-to-protect-1', 'http://endpoint-to-protect-2'] }, window);
     </script>
 ```
+The `endpoints` option is an array of endpoints to protect. You can add as many as you want. The js tag will protect all the endpoints you add.
 
 
 ## How it works
