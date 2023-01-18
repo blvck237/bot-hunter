@@ -1,0 +1,34 @@
+1- Can your detection script generate false positives? Why?
+The detection script provided can easily generate false positives due to the fact the evaluation criteria’s are more or less not accurate. A human that has the same behavioral pattern, or has abnormal sessions duration, or that generates a lot of traffic can be flagged as a bot. 
+But this flag can easily be adjusted if the user solves the displayed captcha in a given time.
+To minimize these false positive, our script makes use of:
+- Browser fingerprints
+- Behavior based approach
+- Evaluates and adjust anomalies in real time to avoid sudden behavioral changes 
+
+2- Can your detection script be bypassed? How?
+The detection provided is far from being an accurate one so bypassing it can be possible due to the following reasons
+- if a bot mimics the same behavior as a human, it has high chances of being considered human
+- The script makes use of ip blacklisting but can’t detect if bots change their ips using proxies
+- Advanced headless chrome bots that can modify their fingerprints will be able to bypass the script. 
+- The predefined rules for analyzing human or bot behaviors are purely estimations, ML will have made it more reliable. 
+- Bot farms can easily resolve the solution’s captchas cause they are basic ones
+- Bots that can resolve the captcha will be considered human, giving them access to client’s website.  
+
+3- How will your solution impact a customer's website? How did you measure it?
+- This solution makes use of a captcha. This means it adds an extra step in a website’s usage if displayed. This captcha will only be displayed on suspicious behavior 
+- The captcha takes an average of 2 seconds to be displayed and can be resolved in 10s
+- The script has a size of 13kb and is loaded within 24ms. This has been measured using the chrome dev tools.
+
+
+4- How can you assess that your detection script will not break a customer's website?
+- The script is loaded asynchronously and is not blocking the website’s loading
+- Google lighthouse can be used to assess the script’s impact on the website’s performance
+- If the bot hunter server is down, the tracking will stop and the website will continue being accessible
+
+
+5- How would you improve your solution if you had more time to work on it?
+- Making use of more fingerprints like TCP and TLS to deeply analyze the user’s behavior
+- Implement a Machine learning model like Sliceline. This will greatly reduce the false positive rate since the actual defined behavioural rules are more or less static estimations. A ML model will be able to adapt to the user’s behavior in real time and adjust the anomalies accordingly.
+- Implementing a real capctcha resolver that can be solved in a reasonable time but not by bots. This will greatly reduce the false positive rate.
+- Implementing a proxy detection system that can detect if the user is using a proxy or not. This will help us detect bots behind residential ips.
