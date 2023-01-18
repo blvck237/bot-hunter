@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
+    "@types/bcrypt": "^5.0.0",
     "@types/cookie-parser": "^1.4.3",
     "@types/cors": "^2.8.13",
     "@types/jest": "~29.2",
@@ -30,11 +31,13 @@
   "dependencies": {
     "@datadome/node-module": "^1.4.3",
     "@supercharge/request-ip": "^1.2.0",
+    "bcrypt": "^5.1.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dayjs": "^1.11.7",
     "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
     "figlet": "^1.5.2",
     "http-status": "^1.6.1",
     "mongodb": "^4.13.0",
