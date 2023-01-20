@@ -55,10 +55,11 @@ It should be added at the start or end of the body tag. It is loaded asynchronou
         var s = a.createElement(b),
           n = a.getElementsByTagName(b)[0];
         (s.async = 1), (s.src = c), n.parentNode.insertBefore(s, n);
-      })(document, 'script', 'https://cdn.jsdelivr.net/gh/blvck237/bot-script@latest/evaluate.js', { endpoints: ['http://endpoint-to-protect-1', 'http://endpoint-to-protect-2'] }, window);
+      })(document, 'script', 'js-script-url', { endpoints: ['http://endpoint-to-protect-1', 'http://endpoint-to-protect-2'] }, window);
     </script>
 ```
-The `endpoints` option is an array of endpoints to protect. You can add as many as you want. The js tag will protect all the endpoints you add.
+- The `js-script-url` is the url of the script to be loaded. A version of the script is hosted on this url: `https://cdn.jsdelivr.net/gh/blvck237/bot-script@latest/evaluate.js`.
+- The `endpoints` option is an array of endpoints to protect. You can add as many as you want. The js tag will protect all the endpoints you add.
 
 
 ## How it works
